@@ -13,3 +13,5 @@ set of rules (those aren't phone number, but you could try)
 * 212222222 (my favorite rule)
 * 012100000 (maze generator)
 * 012120000 (another maze genrerator)
+
+https://silvertakana.github.io/cellular-automata/index.html
