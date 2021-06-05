@@ -2,28 +2,34 @@ var img,
   board,
   pause = false;
 
-var rule = "002100000"
+var rule = "002100000";
+
 //212222222
-//002100000
+//010000000
 var speed;
 function setup() {
   ruleSeter = createInput("002100000");
-  ruleSeter.position(50,100)
-  speed = createSlider(1, 60,1);
-  speed.position(50,50)
+  randomp = createButton("genreate random dots");
+  randomp.position(50, 150);
+  ruleSeter.position(50, 100);
+
+  speed = createSlider(1, 60, 1);
+  speed.position(50, 50);
   createCanvas(windowWidth, windowHeight);
-  let w = floor(width / 10),
-    h = floor(height / 10);
+  let w = floor(width / 4),
+    h = floor(height / 4);
   console.log();
   img = new p5.Image(w, h);
   img.loadPixels();
 
   board = new Board(w, h);
-  for (let i = 0; i < img.width; i++) {
-    for (let j = 0; j < img.height; j++) {
-      board.game[i][j] = random() > 2;
+  randomp.mousePressed(() => {
+    for (let i = 0; i < img.width; i++) {
+      for (let j = 0; j < img.height; j++) {
+        board.game[i][j] = random() > 0.5;
+      }
     }
-  }
+  });
 
   noSmooth();
   // noLoop();
@@ -85,7 +91,9 @@ class Board {
     var Copy = [];
     this.game.forEach((item, id) => {
       Copy[id] = [];
-      item.forEach((it,i)=>{Copy[id][i] = it});
+      item.forEach((it, i) => {
+        Copy[id][i] = it;
+      });
     });
     let w = Copy.length,
       h = Copy[0].length;
