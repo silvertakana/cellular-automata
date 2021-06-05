@@ -7,7 +7,7 @@ how to play
 3. change the slider to change the speed of the simulation
 4. type in the input box to set the rule
 
-set of rules
+set of rules (those aren't phone number, but you could try)
 -----------
 * 002100000 (the original conway's rule)
 * 212222222 (my favorite rule)
