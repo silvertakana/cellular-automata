@@ -1,0 +1,1 @@
+this is a none player game inspired by the game named "game of life"
